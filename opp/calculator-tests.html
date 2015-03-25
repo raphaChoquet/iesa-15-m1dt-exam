@@ -18,6 +18,9 @@
     assert.equal(calculator.result, 5, "result equals 5, result of method add(5)");
     calculator.add('2');
     assert.equal(calculator.result, 7, "method add a number string 2, result equal 7");
+    assert.throws(calculator.add("abc"), "Accepte only number", "method add with string 'abc', throw a error");
+    assert.throws(calculator.add(10, 20), "Accepte only one argument", "method add with 2 arg, throw a error");
+    assert.throws(calculator.add(), "Accepte only one argument", "method add without arg, throw a error");
   });
 
   </script>
