@@ -35,7 +35,12 @@ Calculator.prototype = {
 		this.result = this.result / nbr;
 	}, 
 	multiply: function (nbr) {
+		this.checkHaveOneArgument(this.multiply.arguments);
 
+		nbr = Number(nbr);
+		this.checkIsNumber(nbr);
+		
+		this.result *= nbr;
 	},
 	checkHaveOneArgument: function (args) {
 		if(args.length != 1) {

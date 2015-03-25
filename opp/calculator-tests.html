@@ -62,7 +62,7 @@ QUnit.test("calculator multiply", function( assert ) {
     calculator.multiply(2);
     assert.equal(calculator.result, 20, "result equals 20, result of method multiply(2)");
     calculator.multiply('4');
-    assert.equal(calculator.result, 100, "method multiply a number string 4, result equal 100");
+    assert.equal(calculator.result, 80, "method multiply a number string 4, result equal 80");
     assert.throws(function() {calculator.multiply('abc');}, "Is not a number", "method multiply with string 'abc', throw a error");
     assert.throws(function() {calculator.multiply(10, 20);}, "Accepte only one argument", "method multiply with 2 arg, throw a error");
     assert.throws(function() {calculator.multiply();}, "Accepte only one argument", "method multiply without arg, throw a error");
