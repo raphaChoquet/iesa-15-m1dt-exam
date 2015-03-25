@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSans-Regular.eot');
+    src: url('../font/OpenSans-Regular.ttf') format('trueType'),
+         url('../font/OpenSans-Regular.woff') format('woff');
+}
+
+body {
+	font-family: 'OpenSans';
+	line-height: 1.5;
+	background: url(../images/black_thread.png) repeat center;
+}
+
+.listArticle  {
+	text-align: center;
+}
+
+.listArticle article{
+	display: inline-block;
+	max-width: 250px;
+	margin: 1.5em 2em;
+	padding: 0.5em;
+	text-align: left;
+	background: rgba(255, 255, 255, 1);
+}
