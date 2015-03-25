@@ -35,6 +35,23 @@
     assert.throws(function() {calculator.minus();}, "Accepte only one argument", "method minus without arg, throw a error");
   });
 
+  QUnit.test("calculator divide", function( assert ) {
+    var calculator = new Calculator();
+    assert.equal(calculator.result, 0, "initiliase calculator at 0");
+    assert.equal(calculator.divide(5), undefined, "method divide(5), returns nothing");
+    assert.equal(calculator.result, 0, "result equals 0, result of method divide(5)");
+    calculator.result = 10;
+    assert.equal(calculator.result, 10, "result init at 10");
+    calculator.divide(2);
+    assert.equal(calculator.result, 5, "result equals 5, result of method divide(2)");
+    calculator.divide('5');
+    assert.equal(calculator.result, 1, "method divide a number string 5, result equal 1");
+    assert.throws(function() {calculator.divide(0);}, "Divide by 0 impossible", "method divide by 0, throw a error");
+    assert.throws(function() {calculator.divide('abc');}, "Is not a number", "method divide with string 'abc', throw a error");
+    assert.throws(function() {calculator.divide(10, 20);}, "Accepte only one argument", "method divide with 2 arg, throw a error");
+    assert.throws(function() {calculator.divide();}, "Accepte only one argument", "method divide without arg, throw a error");
+  });
+
   QUnit.test("calculator checkIsNumber", function (assert) {
     var calculator = new Calculator();
     assert.equal(calculator.checkIsNumber(5), true, "method checkIsNumber(5),  returns true");

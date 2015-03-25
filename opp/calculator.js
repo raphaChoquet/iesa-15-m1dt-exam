@@ -14,6 +14,12 @@ Calculator.prototype = {
 
 	},
 	minus: function (nbr) {
+		this.checkHaveOneArgument(this.minus.arguments);
+
+		nbr = Number(nbr);
+		this.checkIsNumber(nbr);
+		
+		this.result -= nbr;
 
 	},
 	divide: function (nbr) {
