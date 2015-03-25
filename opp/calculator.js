@@ -5,7 +5,7 @@ function Calculator ()
 
 Calculator.prototype = {
 	add: function (nbr) {
-		this.result += nbr;
+		this.result += parseInt(nbr);
 	},
 	minus: function (nbr) {
 
