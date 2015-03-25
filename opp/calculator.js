@@ -5,15 +5,12 @@ function Calculator ()
 
 Calculator.prototype = {
 	add: function (nbr) {
-		if(this.add.arguments.length != 1) {
-			throw "Accepte only one argument";
-		}
+		this.checkIsOneArgument(this.add.arguments);
 
 		nbr = Number(nbr);
-		if (isNaN(nbr)) {
-			throw "Accepte only number";
-		} 
-		this.result += parseInt(nbr);
+		this.checkIsNumber(nbr);
+		
+		this.result += nbr;
 
 	},
 	minus: function (nbr) {
@@ -24,5 +21,18 @@ Calculator.prototype = {
 	}, 
 	multiply: function (nbr) {
 
+	},
+	checkIsOneArgument: function (args) {
+		if(args.length != 1) {
+			throw "Accepte only one argument";
+		}
+		return true;
+	},
+
+	checkIsNumber: function(nbr) {
+		if (isNaN(nbr)) {
+			throw "Is not a number";
+		} 
+		return true;
 	}
 }

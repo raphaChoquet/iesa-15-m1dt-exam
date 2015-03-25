@@ -18,9 +18,17 @@
     assert.equal(calculator.result, 5, "result equals 5, result of method add(5)");
     calculator.add('2');
     assert.equal(calculator.result, 7, "method add a number string 2, result equal 7");
-    assert.throws(function() {calculator.add('abc');}, "Accepte only number", "method add with string 'abc', throw a error");
+    assert.throws(function() {calculator.add('abc');}, "Is not a number", "method add with string 'abc', throw a error");
     assert.throws(function() {calculator.add(10, 20);}, "Accepte only one argument", "method add with 2 arg, throw a error");
     assert.throws(function() {calculator.add();}, "Accepte only one argument", "method add without arg, throw a error");
+  });
+
+  QUnit.test("calculator checkIsNumber", function (assert) {
+    var calculator = new Calculator();
+    assert.equal(calculator.checkIsNumber(5), true, "method checkIsNumber(5),  returns nothing");
+    assert.equal(calculator.checkIsNumber('5'), true, "method checkIsNumber('5'),  returns nothing");
+    assert.throws(function() {calculator.checkIsNumber('5d');}, "Is not a number", "method checkIsNumber with string 5b, throw a error");
+    assert.throws(function() {calculator.checkIsNumber();}, "Is not a number", "method checkIsNumber with string 5b, throw a error");
   });
 
   </script>
