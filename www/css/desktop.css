@@ -7,8 +7,65 @@
 
 body {
 	font-family: 'OpenSans';
+	margin: 0;
 	line-height: 1.5;
+	color: #454545;
 	background: url(../images/black_thread.png) repeat center;
+}
+
+.HeaderPage { 
+	background:  #293A57;
+	color: white;
+}
+
+.HeaderPage .logo{
+	float: right;
+	padding: 1.5em 1em;
+}
+
+.HeaderPage h1 {
+	margin: 0;
+	padding: 0.75em 1em;
+	font-size: 2em;
+	line-height: 1.5em;
+}
+
+.navPrincipal ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.navPrincipal li {
+	display: inline-block;
+	padding: 0 1em;
+	line-height: 1.5;
+}
+
+.navPrincipal a {
+	display: inline-block;
+	padding-bottom: 0.5em;
+	color: #dedede;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	border-bottom: 2px solid transparent;
+}
+
+.navPrincipal a:hover {
+	color: #fff;
+	border-bottom-color: #FFF;
+}	
+
+.navPrincipal a.active {
+	color: #5D7EA5;
+	border-bottom-color: #5D7EA5;
+}
+
+.footer {
+	background:  #293A57;
+	padding: 2em 1.5em;
+	color: #dedede;
 }
 
 .listArticle  {
@@ -16,10 +73,97 @@ body {
 }
 
 .listArticle article{
+	position: relative;
 	display: inline-block;
 	max-width: 250px;
+	height: 600px;
 	margin: 1.5em 2em;
 	padding: 0.5em;
 	text-align: left;
-	background: rgba(255, 255, 255, 1);
+	background: #EFEFEF;
+	vertical-align: top;
+}
+
+.listArticle article h2 {
+	text-transform: uppercase; 
+	font-weight: normal;
+	font-size: 1.5em;
+	line-height: 1;
+	margin: 0.75em 0;
+}
+
+.listArticle article ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.listArticle article ul li {
+	margin: 0.5em 0;
+}
+
+.listArticle article a {
+	position: absolute;
+	bottom: 1.5em;
+}
+
+.msgError {
+	background: #A52E24;
+	margin: 0;
+	padding: 0.5em 2em;
+	text-align: center;
+	color: #FFF;
+
+}
+
+form input{	
+	margin: 0;
+	border-radius: 0;
+	border: 1px solid #454545;	
+}
+
+form button {
+	border-radius: 0px;
+    border: 1px solid #454545;
+    font-size: 0px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0px;
+    border-left: 0px none;
+    background: #454545 url("../images/search-white.png") center no-repeat;
+}
+
+form button:hover {
+	background: #EFEFEF url("../images/search.png") center no-repeat;
+}
+
+.mainArticle {
+	max-width: 960px;
+	background: #EFEFEF;
+	margin: 1.5em auto;
+	padding: 1.5em;	
+}
+
+.mainArticle img {
+	float: left;
+	margin-right:  2em;
+	margin-bottom: 1.5em;
+}
+
+.mainArticle h2 {
+	margin-top: 0;
+	font-size: 1.5em;
+}
+
+.mainArticle ul {
+	list-style: none;
+} 
+
+.mainArticle ul li {
+	margin-bottom: 1em;
+}
+
+.mainArticle p {
+	clear: both;
+	margin-top: 1.5em;
 }

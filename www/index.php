@@ -1,4 +1,6 @@
 <?php
+
+	require('util.php');
 		
 	function buildArticle($planete) 
 	{
@@ -29,17 +31,6 @@
 		return $html;
 	}
 
-	function buildNav($planetes) 
-	{
-		$html = '<ul>';
-		foreach ($planetes as $planete) {
-			$html .= '<li><a href="detail.php?planete=' . strtolower($planete->name) .'" >' . $planete->name .'</a></li>';
-		}
-
-		$html .= '</ul>';
-		return $html;
-	}
-
 	$planetes = json_decode(file_get_contents('planete.json'));
 ?>
  <!DOCTYPE html>
@@ -48,18 +39,22 @@
  	<meta charset="UTF-8">
  	<title>Galactique map</title>
  	<link rel="stylesheet" href="css/desktop.css" media="only screen">
+ 	<link rel="stylesheet" href="css/mobile.css" media="only screen and (min-width:0px) and (max-width: 480px)"> 
  </head>
  <body>
  	<section id="main">
-	 	<header>
-	 		<img src="images/logo.png">
-	 		<h1>galactique Map</h1>
-		 	<nav>
-		 		<?php echo buildNav($planetes);?>
+	 	<header class="HeaderPage">
+	 		<img src="images/logo.png" class="logo">
+	 		<h1>Galactique Map</h1>
+		 	<nav class="navPrincipal">
+		 		<?php echo buildNav('home', $planetes);?>
 		 	</nav>
 	 	</header>
+	 	<?php if (isset($_GET['error']) && $_GET['error'] == 404) : ?>
+	 		<p class="msgError">Impossible de trouver des informations sur la planete recherché</p>
+	 	<?php endif;?>
 	 	<?php echo buildList($planetes);?>
-	 	<footer>
+	 	<footer class="footer">
 	 		@Raphaël Choquet - information issue de Wikipédia
 	 	</footer>
  	</section>
