@@ -83,7 +83,16 @@ QUnit.test("calculator multiply", function( assert ) {
     assert.throws(function() {calculator.checkHaveOneArgument(Array());}, "Accepte only one argument", "method checkHaveOneArgument with 0 argument, throw a error");
   });
 
-
+  QUnit.test("calculator use all method", function (assert) {
+    var calculator = new Calculator();
+    assert.equal(calculator.result, 0, "initiliase calculator at 0"); 
+    calculator.add(5);
+    assert.equal(calculator.result, 5, "result equals 5, result of method add(5)"); 
+    calculator.multiply(10);
+    calculator.minus(8);
+    calculator.divide(6);
+    assert.equal(calculator.result, 7, "result equals 7, result of operation ((5 * 10) - 8)/6"); 
+  });
 
   </script>
 </head>
