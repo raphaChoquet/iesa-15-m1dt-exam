@@ -3,7 +3,7 @@ var enigma = new Enigma();
 function decryptHtml(DOMElement) {
 	if (DOMElement.hasChildNodes()) {
 		browseChild(DOMElement);
-	} else if (DOMElement.nodeType == DOMElement.TEXT_NODE && DOMElement.textContent != ''){
+	} else if (DOMElement.nodeType == DOMElement.TEXT_NODE && DOMElement.textContent.trim() != '') {
 		DOMElement.textContent = enigma.decrypt(DOMElement.textContent);
 	}
 }
@@ -14,5 +14,7 @@ function browseChild(DOMElement){
 		decryptHtml(child[i]);
 	}
 }		
+
+
 
 decryptHtml(document.body);
