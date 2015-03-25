@@ -5,7 +5,7 @@ function Calculator ()
 
 Calculator.prototype = {
 	add: function (nbr) {
-
+		
 	},
 	minus: function (nbr) {
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="refresh" content="10">
-  <title>Enigma Unit Tests</title>
+  <title>Calculator Unit Tests</title>
  
   <link rel="stylesheet" href="qunit/qunit-1.17.1.css">
   <script src="qunit/qunit-1.17.1.js"></script>
@@ -11,8 +11,14 @@
  
   <script>
 
-/*  QUnit.test("calculator", function( assert ) {
-  });*/
+  QUnit.test("calculator add", function( assert ) {
+    var calculator = new Calculator();
+    assert.equal(calculator.result, 0, "initiliase calculator at 0");
+    assert.equal(calculator.add(5), undefined, "method add(5),  returns nothing");
+    assert.equal(calculator.result, 5, "result equals 5, result of method add(5)");
+  
+  });
+
   </script>
 </head>
 <body>
