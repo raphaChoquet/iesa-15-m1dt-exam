@@ -1,6 +1,6 @@
 function Enigma() 
 { 	
-	this.charsDecoded = Array(
+	var charsDecoded = Array(
 		"a", "b", "c", "d", "e", 
 		"f", "g", "h", "i", "j", 
 		"k", "l", "m", "n", "o", 
@@ -10,8 +10,7 @@ function Enigma()
 		":", ";"
 	);
 
-
-	this.charsEncoded = Array(
+	var charsEncoded = Array(
 		"j", "d", "w", "o", "v", 
 		"a", "r", "i", "g", " ", 
 		"x", "u", "n", "s", "y", 
@@ -25,8 +24,7 @@ function Enigma()
 		var chars = str.split('');
 		var msgEncrypted = "";
 		for (var i = 0; i < chars.length; ++i) {
-			var position = this.charsDecoded.indexOf(chars[i]);
-			msgEncrypted += this.charsEncoded[i];
+			msgEncrypted += this.encryptChar(chars[i]);
 		}
 		return msgEncrypted;
 	};
@@ -35,16 +33,21 @@ function Enigma()
 		var chars = str.split('');
 		var msgDecrypted = "";
 		for (var i = 0; i < chars.length; ++i) {
-			var position = this.charsEncoded.indexOf(chars[i]);
-			msgDecrypted += this.charsDecoded[i];
+			msgDecrypted += this.decryptChar(chars[i]);
 		}
 		return msgDecrypted;
 	};
 
+
+	this.encryptChar = function (char) {
+		var i = charsDecoded.indexOf(char);
+		return charsEncoded[i];
+	};
+
+
+	this.decryptChar = function (char) {
+		var i = charsEncoded.indexOf(char);
+		return charsDecoded[i];
+	};
+
 }
-
-var test = new Enigma();
-
-var msg = test.encrypt("abcdefghijklmnopqrstuvwxyz '.,:;");
-
-console.log(msg);
