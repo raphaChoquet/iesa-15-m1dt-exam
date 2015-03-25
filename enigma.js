@@ -41,13 +41,13 @@ function Enigma()
 
 	this.encryptChar = function (char) {
 		var i = charsDecoded.indexOf(char);
-		return charsEncoded[i];
+		return i !== -1 ? charsEncoded[i] : char;
 	};
 
 
 	this.decryptChar = function (char) {
 		var i = charsEncoded.indexOf(char);
-		return charsDecoded[i];
+		return i !== -1 ? charsDecoded[i] : char;
 	};
 
 }
