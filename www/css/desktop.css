@@ -66,6 +66,7 @@ body {
 	background:  #293A57;
 	padding: 2em 1.5em;
 	color: #dedede;
+	height: 100px;
 }
 
 .listArticle  {
@@ -166,4 +167,14 @@ form button:hover {
 .mainArticle p {
 	clear: both;
 	margin-top: 1.5em;
+}
+
+#map {
+	float: left;
+	width: 250px;
+	height: 100px;
+}
+
+footer p {
+	float: right;
 }

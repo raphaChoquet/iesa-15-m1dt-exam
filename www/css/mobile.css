@@ -26,3 +26,16 @@
 .listArticle article {
 	margin: 1.5em auto;
 }
+
+.footer {
+	height: auto;
+}
+
+#map {
+	float: none;
+	width: 100%;
+}
+
+footer p {
+	float: none;
+}

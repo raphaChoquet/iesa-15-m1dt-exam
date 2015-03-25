@@ -46,9 +46,12 @@
 				<?php echo $planete->content;?>
 			</article>
 	 	<footer class="footer">
-	 		@Raphaël Choquet - information issue de Wikipédia
+	 		<div id="map"></div>
+	 		<p>@Raphaël Choquet - information issue de Wikipédia</p>
 	 	</footer>
  	</section>
+ 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+ 	<script src="js/geoloc.js"></script>
  </body>
  </html>
 

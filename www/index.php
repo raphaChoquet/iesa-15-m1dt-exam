@@ -40,6 +40,7 @@
  	<title>Galactique map</title>
  	<link rel="stylesheet" href="css/desktop.css" media="only screen">
  	<link rel="stylesheet" href="css/mobile.css" media="only screen and (min-width:0px) and (max-width: 480px)"> 
+
  </head>
  <body>
  	<section id="main">
@@ -55,9 +56,12 @@
 	 	<?php endif;?>
 	 	<?php echo buildList($planetes);?>
 	 	<footer class="footer">
-	 		@Raphaël Choquet - information issue de Wikipédia
+	 		<div id="map"></div>
+	 		<p>@Raphaël Choquet - information issue de Wikipédia</p>
 	 	</footer>
  	</section>
+ 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+ 	<script src="js/geoloc.js"></script>
  </body>
  </html>
 
