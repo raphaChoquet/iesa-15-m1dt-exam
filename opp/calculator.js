@@ -23,7 +23,6 @@ Calculator.prototype = {
 
 	},
 	checkHaveOneArgument: function (args) {
-		console.log(args);
 		if(args.length != 1) {
 			throw "Accepte only one argument";
 		}
