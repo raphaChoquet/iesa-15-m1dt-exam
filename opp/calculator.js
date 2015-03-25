@@ -23,7 +23,16 @@ Calculator.prototype = {
 
 	},
 	divide: function (nbr) {
+		this.checkHaveOneArgument(this.divide.arguments);
 
+		nbr = Number(nbr);
+		this.checkIsNumber(nbr);
+		
+		if (nbr === 0) {
+			throw 'Divide by 0 impossible';
+		}
+
+		this.result = this.result / nbr;
 	}, 
 	multiply: function (nbr) {
 
