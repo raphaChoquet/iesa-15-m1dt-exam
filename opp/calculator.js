@@ -5,7 +5,7 @@ function Calculator ()
 
 Calculator.prototype = {
 	add: function (nbr) {
-		this.checkIsOneArgument(this.add.arguments);
+		this.checkHaveOneArgument(this.add.arguments);
 
 		nbr = Number(nbr);
 		this.checkIsNumber(nbr);
@@ -22,7 +22,8 @@ Calculator.prototype = {
 	multiply: function (nbr) {
 
 	},
-	checkIsOneArgument: function (args) {
+	checkHaveOneArgument: function (args) {
+		console.log(args);
 		if(args.length != 1) {
 			throw "Accepte only one argument";
 		}
