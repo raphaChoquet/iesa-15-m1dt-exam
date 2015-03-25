@@ -1,4 +1,4 @@
 # Test Unitaire
 
-* Le test unitaire n'est pas du test, c'est de la documentation. Un test décrit comment le comportement d'une fonction, ce qu'elle prend en paramétre et ce qu'elle retourne.
-* Le TDD n'est pas du test, c'est une logique, une méthode de développement qui consiste à créer en premier le test qui va décrire le comportement de notre fonction. La fonction ne sera écrite qu'aprés la conception du test. C'est le test qui va guider le développement d'ou TDD (Test Driving Development). 
+* Le test unitaire n'est pas du test, c'est de la documentation. Un test décrit le comportement d'une fonction, ce qu'elle prend en paramétre et ce qu'elle retourne.
+* Le TDD n'est pas du test, c'est une logique, une méthode de développement. Le développeur écrit en premier les tests qui vont définir le comportement de notre fonction. Ensuite il créera la fonction qui va valider ces tests. C'est le test qui va guider le développement d'ou l'abréviation TDD (Test Driving Development). 
